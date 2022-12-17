@@ -51,12 +51,7 @@ public class TestScript extends AbstractScript {
 //    String [] filterWorlds = {};
 //    String [] finalWorlds = {};
     List<Integer> finalWorlds = new ArrayList<Integer>();
-   // String [][] accounts = {{"almightyswan20@mail.com", "OldKyles10"}, {"almightyswan9@mail.com", "OldKyles10"}, {"almightyswan12@mail.com", "OldKyles10"},
-   // {"almightyswan13@mail.com", "OldKyles10"}, {"almightyswan6@mail.com", "OldKyles10"},
-   // {"almightyswan8@mail.com", "OldKyles10"}};
-    String [][] accounts = {{"almightyswan19@mail.com", "OldKyles10"}, {"OldKyles10"}, {"almightyswan16@mail.com", "OldKyles10"},
-           {"almightyswan17@mail.com", "OldKyles10"}, {"almightyswan18@mail.com", "OldKyles10"},
-           {"almightyswan14@mail.com", "OldKyles10"}, {"almightyswan15@mail.com", "OldKyles10"}};
+
 
     @Override //Infinite loop
     public int onLoop() {
@@ -123,9 +118,9 @@ public class TestScript extends AbstractScript {
             int milisecondsOut = (1000*60*20);
             log("Staying logged out for... " + milisecondsOut);
             sleep(milisecondsOut);
-            LoginUtility.login(userAcc, "OldKyles10");
+            LoginUtility.login(userAcc, "");
             sleep(2000);
-            LoginUtility.login(userAcc, "OldKyles10");
+            LoginUtility.login(userAcc, "");
             Sleep.sleepUntil(()-> Client.getGameState() == GameState.LOGGED_IN, 30000);
             sleep(750);
         }
@@ -175,9 +170,9 @@ public class TestScript extends AbstractScript {
 //                            LoginUtility.changeWorld(randomElement);
 //                            sleep(1000);
 //                            LoginUtility.closeWorldScreen();
-                            LoginUtility.login(userAcc, "OldKyles10");
+                            LoginUtility.login(userAcc, "");
                             sleep(2000);
-                            LoginUtility.login(userAcc, "OldKyles10");
+                            LoginUtility.login(userAcc, "");
                             Sleep.sleepUntil(()-> Client.getGameState() == GameState.LOGGED_IN, 30000);
                             sleep(750);
                         }
@@ -269,7 +264,6 @@ public class TestScript extends AbstractScript {
         //finalWorlds = filterWorlds.subList(0, filterWorlds.size()/2);
         finalWorlds = filterWorlds.subList((filterWorlds.size()/2), filterWorlds.size());
 
-//        String [][] accounts = {{"almightyswan6@mail.com", "OldKyles10"}, {"almightyswan8@mail.com", "OldKyles10"}, {"almightyswan9@mail.com", "OldKyles10"}, {"almightyswan12@mail.com", "OldKyles10"}, {"almightyswan13@mail.com", "OldKyles10"}, {"almightyswan14@mail.com", "OldKyles10"},  {"almightyswan15@mail.com", "OldKyles10"},  {"almightyswan16@mail.com", "OldKyles10"}, {"almightyswan17@mail.com", "OldKyles10"}, {"almightyswan18@mail.com", "OldKyles10"}};
 
 
     }
